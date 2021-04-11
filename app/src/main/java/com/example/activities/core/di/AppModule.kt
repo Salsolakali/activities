@@ -3,6 +3,8 @@ package com.example.activities.core.di
 import android.app.Application
 import android.content.Context
 import com.example.activities.R
+import com.example.activities.core.presentation.Navigator
+import com.example.activities.features.home.presentation.JobAdapter
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -31,9 +33,9 @@ class AppModule {
         return context.getString(R.string.app_name)
     }
 
-    /*@Provides
-    fun providesAdapter(): BeerAdapter{
-        return BeerAdapter()
-    }*/
+    @Provides
+    fun providesAdapter(): JobAdapter {
+        return JobAdapter()
+    }
 
 }

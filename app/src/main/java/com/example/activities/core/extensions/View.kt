@@ -7,6 +7,9 @@ import android.widget.ImageView
 import androidx.annotation.LayoutRes
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
+import java.text.ParseException
+import java.text.SimpleDateFormat
+import java.util.*
 
 
 fun ViewGroup.inflate(@LayoutRes layoutRes: Int): View =
@@ -17,4 +20,3 @@ fun ImageView.loadFromUrl(url: String) =
         .load(url)
         .transition(DrawableTransitionOptions.withCrossFade())
         .into(this)
-
